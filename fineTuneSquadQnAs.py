@@ -109,7 +109,7 @@ test_dataset = SquadDataset(test_encodings)
 
 
 squad_model.train()
-no_of_epochs = 3
+no_of_epochs = 5
 train_loader = DataLoader(train_dataset, batch_size=16, shuffle=True)
 
 #using AdamW as the optimizer in order to avoid overfitting
