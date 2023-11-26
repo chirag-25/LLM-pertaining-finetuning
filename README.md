@@ -1,7 +1,3 @@
-# nlp-assignment-wordweavers
-
-
-
 ## Pre-Training Bert from scratch
 
 This pretrained model is pushed to Hugging [Face](https://huggingface.co/Dhairya/nlp-bert-wordWeavers-pretrained)
@@ -25,7 +21,7 @@ Steps:
 4. We then configured the training arguments which will be used to initialize the trainer. We appropriately choose the hyperparameters to fine-tune the model in the most efficient way possible.
 5. A compute_metrics function was defined, which again will be fed into the trainer and will be used to compute the precision, recall, f1 and accuracy scores of the validation set at the end of each epoch during training.
 6. We then created a trainer instance, feeding the tokenized train and test dataset into the instance.
-7. We then ran the trainer and set up a function in order to print the final returns of the fine-tuned model on the test dataset.
+7. We then ran the trainer and set up a function in order to print the final returns of the fine-tuned model on the test dataset. It is pushed to [Hugging Face](https://huggingface.co/Dhairya/bert-wordweavers-ft-sst2)
 
 ### Evaluation
 | Metric    | Score  |
@@ -45,7 +41,7 @@ These results are obtained by evaluating our fine tuned model on the fully unsee
 4. Since the dataset does not contain the end token indices of the answers, we calculate and add them to the answers list using the start index and the answer sentence.
 5. We correct any off-set errors that might be there in the dataset and remove any data points which have missing questions or answers.
 6. We define a dataset trainer argument(hyperparameter) including the number of epochs, learning rates etc and feed it into the trainer.
-7. Lastly we run a preliminary evaluation on the validation data set using the trainer instance. 
+7. Lastly we run a preliminary evaluation on the validation data set using the trainer instance. It is pushed to [Hugging Face](https://huggingface.co/Dhairya/bert-wordweavers-ft-squad)
 
 ### Evaluation
 
